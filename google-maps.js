@@ -8,6 +8,10 @@ GoogleMaps = {
     script.type = 'text/javascript';
     script.src = 'https://maps.googleapis.com/maps/api/js?' + params +
       '&callback=GoogleMaps.initialize';
+    if(options.china) {
+      scripts.src = 'http://maps.google.cn/maps/api/js?' + params +
+        '&callback=GoogleMaps.initialize';
+    }
 
     document.body.appendChild(script);
   }),
